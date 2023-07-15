@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <div class="overlay" id="overlay">
+        <h3>Searching Now...</h3>
+    </div>
     <div class="hero-bg">
         <section class="top">
             <header>
@@ -17,7 +20,7 @@
 
             <h1><span>The Healthy</span> Lemon Supplier</h1>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A dolor debitis est fugit atque labore quisquam doloribus explicabo quos aspernatur? Magnam voluptas aliquid, quasi provident molestias reiciendis commodi aspernatur nihil magni sunt in enim at eaque quod, iste quos iusto.</p>
+            <p>Lorem, ipsum dolor A dolor debitis est fugit atque labore quisquam doloribus explicabo quos aspernatur? aque quod, iste quos iusto.</p>
 
             <div class="form-container">
                 <form action="/page">
@@ -27,21 +30,32 @@
                         <p>Example: "New Delhi", "Mumbai"</p>
                     </div>
 
-                    <input type="button" value="Find Lemon Now">
+                    <input type="button" value="Find Lemon Now" id="cta-btn">
                 </form>
             </div>
 
         </section>
     </div>
 
-    <section class="authwholesome">
+    <section class="authentic">
         <div class="right-colm">
-            <h2>Authentic. Awesome</h2>
+            <h2>Authentic. Awesome.</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, perspiciatis! Adipisci sint itaque similique assumenda neque accusantium eos, nisi cum, quam ab consectetur repudiandae aliquam! Iusto at repellendus commodi molestias?</p>
         </div>
         
-        <img src="#" alt="A Momos picture">
+        <img src="imgs/momos.jpg" alt="A Momos picture">
     </section>
+
+    <script>
+        let btn = document.getElementById('cta-btn');
+
+        let overlay = document.getElementById('overlay');
+
+        btn.addEventListener('click', () => {
+            overlay.style.display = 'grid';
+        })
+
+    </script>
 </body>
 
 </html>

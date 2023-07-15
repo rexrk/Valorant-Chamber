@@ -11,7 +11,7 @@ body {
     background: #307d99 url('../imgs/bg.jpg');
     color: white;
     padding: 0 3em 3em 3em;
-    background-position: 0 20%;
+    background-position: 0 90%;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ header {
     color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 1.2rem;
 }
 
 section {
@@ -32,15 +32,16 @@ section {
 
 h1 {
     font-weight: bold;
-    font-size: 5.5rem;
-    margin: .9em 0;
+    font-size: 3rem;
+    line-height: 1em;
+    margin: 1em 0;
 }
 
 h1 span {
     text-transform: uppercase;
     font-weight: bold;
     display: block;
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     position: relative;
     z-index: 1;
 }
@@ -48,18 +49,18 @@ h1 span {
 h1 span::before {
     content: ' ';
     position: absolute;
-    width: 3.5em;
+    width: 3em;
     background: #00BFFF;
-    height: .4em;
+    height: .3em;
     bottom: 0;
     z-index: -1;
-    margin-left: -.5em;
-    margin-bottom: .35rem;
+    margin-left: -.6em;
+    margin-bottom: .5rem;
 }
 
 .hero-bg p {
     font-weight: 600;
-    margin: -4em 1em 5em;
+    margin: -1em 1em 5em;
 }
 
 .form-container {
@@ -77,36 +78,184 @@ label {
 }
 
 input[type=text] {
+    margin-bottom: 1em;
     border: 1px solid #1c1616;
     padding-top: 1em;
     padding-bottom: 1em;
     box-sizing: border-box;
     width: 90%;
-    border-radius: 40px;
-    margin-top: .5em;
+    border-radius: 10px;
+
 }
 
 .form-container p {
     color: gray;
     margin-bottom: 1.5em;
     font-size: .97em;
-    margin-top: 1.5em;
+    margin-top: 0.01em;
 }
 
 input[type=button] {
     background-color: rgb(255, 98, 0);
     border: none;
     width: 90%;
+    margin: -1em;
     padding: .95em 0;
     box-sizing: border-box;
     color: white;
     font-weight: bold;
-    border-radius: 40px;
+    border-radius: 10px;
     font-size: 1.1em;
     cursor: pointer;
 
 }
 
-input[type=button]:hover{
+input[type=button]:hover {
     background-color: #e25513;
+}
+
+.authentic {
+    margin: 0;
+}
+
+.right-colm {
+    text-align: center;
+    margin: 3em 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::before {
+    content: ' ';
+    position: absolute;
+    width: 3.5em;
+    background: #00BFFF;
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.5em;
+    margin-bottom: .35rem;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 2em;
+}
+
+.overlay {
+    position: absolute;
+    height: 103.4vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    z-index: 1;
+    place-content: center;
+    color: white;
+    display: none;
+}
+
+@media (min-width: 730px) {
+    section {
+        margin: 0 5em;
+    }
+
+    .form-container {
+        margin: 2em -8em 0;
+    }
+
+}
+
+
+@media (min-width: 930px) {
+
+    .hero-bg {
+        text-align: left;
+    }
+
+    .hero-bg p {
+        font-weight: bold;
+        margin: 0 0 5em;
+        padding-bottom: 1em;
+    }
+
+    .hero-bg section {
+        width: 65%;
+    }
+
+    .form-container {
+        margin: 2em 0;
+        padding: 3em;
+        padding-right: 3.5em;
+        padding-bottom: .3em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 10px rgb(0, 0, 0, .5);
+
+    }
+
+    form {
+        display: flex;
+
+    }
+
+    .form-left {
+        width: 70%;
+    }
+
+    label {
+        margin: 0;
+    }
+
+    input[type="button"] {
+        height: fit-content;
+        font-size: 1em;
+        margin-top: 1.7em;
+        padding: 1em 0;
+        width: 40%;
+    }
+
+    .hero-bg p {
+        margin-top: -.7em;
+        margin-bottom: 3em;
+    }
+
+    section.authentic {
+        display: grid;
+        grid-template-columns: repeat(2, 40%, 60%);
+        grid-template-areas: "bowl content";
+    }
+
+    .right-colm {
+        grid-area: content;
+        padding: 0 10%;
+        text-align: left;
+        align-self: center;
+
+    }
+
+    img {
+        grid-area: bowl;
+        height: 400px;
+        width: 400px;
+    }
+}
+
+.top {
+    animation: fadeIn 1.4s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4em);
+    }
+
+    to {
+        opacity: 1;
+    }
+
 }
